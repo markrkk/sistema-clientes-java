@@ -1,6 +1,5 @@
 /**
  * Clase que representa un Cliente del sistema.
- * Contiene la información personal necesaria para su gestión.
  */
 public class Cliente {
 
@@ -14,7 +13,7 @@ public class Cliente {
     private String correo;
 
     /**
-     * Constructor para crear un cliente con todos sus datos.
+     * Constructor para crear un cliente con sus datos.
      */
     public Cliente(int id, String nombre, String apellidos, String sexo,
                    String ciudad, String fechaNacimiento,
@@ -39,7 +38,7 @@ public class Cliente {
     }
 
     /**
-     * Permite actualizar todos los datos del cliente.
+     * Actualizamos todos los datos del cliente.
      */
     public void actualizarDatos(String nombre, String apellidos, String sexo,
                                 String ciudad, String fechaNacimiento,
