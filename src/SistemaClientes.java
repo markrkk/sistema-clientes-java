@@ -1,10 +1,8 @@
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * Clase principal que gestiona la interacción con el usuario por consola.
- * Permite realizar operaciones CRUD básicas.
- */
+//Clase principal que gestiona el menu y la interaccion por consola
+
 public class SistemaClientes {
 
     private static Scanner sc = new Scanner(System.in);
@@ -44,9 +42,8 @@ public class SistemaClientes {
         } while (opcion != 6);
     }
 
-    /**
-     * Muestra el menú principal del sistema.
-     */
+    //Muestra las opciones disponibles del sistema
+    
     private static void mostrarMenu() {
         System.out.println("\n--- MENÚ CLIENTES ---");
         System.out.println("1. Agregar cliente");
@@ -66,9 +63,8 @@ public class SistemaClientes {
         }
     }
 
-    /**
-     * Solicita un campo obligatorio.
-     */
+    //Pide un dato obligatorio por consola
+    
     private static String pedirCampo(String mensaje) {
         String valor;
         do {
@@ -97,6 +93,8 @@ public class SistemaClientes {
         System.out.println("Cliente agregado correctamente.");
     }
 
+    //Muestra todos los clientes registrados
+    
     private static void listarClientes() {
 
         List<Cliente> lista = service.getClientes();
@@ -111,6 +109,8 @@ public class SistemaClientes {
         }
     }
 
+    //Permite modificar los datos de un cliente existente
+    
     private static void actualizarCliente() {
 
         System.out.print("ID del cliente a actualizar: ");
@@ -149,6 +149,8 @@ public class SistemaClientes {
         }
     }
 
+    //Busca clientes segun la ciudad indicada
+    
     private static void buscarPorCiudad() {
 
         System.out.print("Ciudad a buscar: ");
