@@ -1,25 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase encargada de la lógica de negocio del sistema.
- * Gestiona las operaciones CRUD sobre los clientes.
- */
+//Clase que gestiona la logica del sistema (CRUD DE CLIENTES)
 public class ClienteService {
 
     private List<Cliente> clientes = new ArrayList<>();
     private int contadorId = 1;
 
-    /**
-     * Devuelve la lista completa de clientes.
-     */
+    // Devuelve la lista completa de clientes.
     public List<Cliente> getClientes() {
         return clientes;
     }
 
-    /**
-     * Agrega un nuevo cliente al sistema.
-     */
+    //Crea un nuevo cliente y lo añade a la lista
+    
     public void agregarCliente(String nombre, String apellidos, String sexo,
                                String ciudad, String fecha,
                                String telefono, String correo) {
@@ -30,9 +24,8 @@ public class ClienteService {
         clientes.add(nuevo);
     }
 
-    /**
-     * Busca un cliente por su ID.
-     */
+    // Busca un cliente por su ID.
+     
     public Cliente buscarPorId(int id) {
         for (Cliente c : clientes) {
             if (c.getId() == id) {
@@ -42,9 +35,8 @@ public class ClienteService {
         return null;
     }
 
-    /**
-     * Elimina un cliente por ID.
-     */
+    //Elimina un cliente por ID si existe.
+     
     public boolean eliminarCliente(int id) {
         Cliente c = buscarPorId(id);
         if (c != null) {
